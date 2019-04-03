@@ -1,5 +1,9 @@
 package projetojavagui;
 
+import com.sun.xml.internal.bind.v2.runtime.property.StructureLoaderBuilder;
+import projetojavagui.JFPrincipal;
+import javax.swing.JOptionPane;
+
 public class JFLogin extends javax.swing.JFrame {
 
     public JFLogin() {
@@ -22,6 +26,16 @@ public class JFLogin extends javax.swing.JFrame {
         setTitle("Sistema ABC - Login");
 
         btnEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projetojavagui/imagens/agora vai.png"))); // NOI18N
+        btnEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEntrarMouseClicked(evt);
+            }
+        });
+        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntrarActionPerformed(evt);
+            }
+        });
 
         btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/projetojavagui/imagens/opa.png"))); // NOI18N
         btnSair.addActionListener(new java.awt.event.ActionListener() {
@@ -61,9 +75,11 @@ public class JFLogin extends javax.swing.JFrame {
                     .addComponent(lblSenha)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(60, 60, 60)
-                            .addComponent(btnSair, javax.swing.GroupLayout.DEFAULT_SIZE, 197, Short.MAX_VALUE))
+                            .addGap(111, 111, 111)
+                            .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(39, 39, 39)
+                            .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 117, Short.MAX_VALUE))
                         .addComponent(txtSenha)
                         .addComponent(txtUsuario)))
                 .addGap(54, 54, 54))
@@ -83,10 +99,10 @@ public class JFLogin extends javax.swing.JFrame {
                         .addGap(11, 11, 11)
                         .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnSair, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(40, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnSair, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
+                            .addComponent(btnEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         pack();
@@ -102,6 +118,32 @@ public class JFLogin extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
 
+    private void btnEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEntrarMouseClicked
+        // TODO add your handling code here:
+        //projetojavagui.JFPrincipal frame = new projetojavagui.JFPrincipal();
+        //frame.setVisible(true);
+        //this.dispose();
+    }//GEN-LAST:event_btnEntrarMouseClicked
+
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        String entrar = txtUsuario.getText();
+        String senha = txtSenha.getText();
+        
+        if (entrar.equals("Marcos") && senha.equals("admin")) {
+            JOptionPane.showMessageDialog(null, "Bem vindo " + entrar+"!");
+            projetojavagui.JFPrincipal frame = new projetojavagui.JFPrincipal();
+            frame.setVisible(true);
+            this.dispose();
+            
+        }else{
+            JOptionPane.showMessageDialog(null, "Acesso Negado");
+        }
+    }//GEN-LAST:event_btnEntrarActionPerformed
+    
+   
+  
+    
+    
     /**
      * @param args the command line arguments
      */
