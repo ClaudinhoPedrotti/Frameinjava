@@ -119,10 +119,7 @@ public class JFLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void btnEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEntrarMouseClicked
-        // TODO add your handling code here:
-        //projetojavagui.JFPrincipal frame = new projetojavagui.JFPrincipal();
-        //frame.setVisible(true);
-        //this.dispose();
+        
     }//GEN-LAST:event_btnEntrarMouseClicked
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
