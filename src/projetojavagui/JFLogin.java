@@ -132,7 +132,13 @@ public class JFLogin extends javax.swing.JFrame {
             frame.setVisible(true);
             this.dispose();
             
-        }else{
+        }if (entrar.equals("Claudio") && senha.equals("admin")) {
+            JOptionPane.showMessageDialog(null, "Bem vindo " + entrar+"!");
+            projetojavagui.JFPrincipal frame = new projetojavagui.JFPrincipal();
+            frame.setVisible(true);
+            this.dispose();
+        }
+        else{
             JOptionPane.showMessageDialog(null, "Acesso Negado");
         }
     }//GEN-LAST:event_btnEntrarActionPerformed
