@@ -8,6 +8,7 @@ public class JFLogin extends javax.swing.JFrame {
 
     public JFLogin() {
         initComponents();
+               
     }
 
     @SuppressWarnings("unchecked")
@@ -128,17 +129,16 @@ public class JFLogin extends javax.swing.JFrame {
         
         if (entrar.equals("Marcos") && senha.equals("admin")) {
             JOptionPane.showMessageDialog(null, "Bem vindo " + entrar+"!");
-            projetojavagui.JFPrincipal frame = new projetojavagui.JFPrincipal();
+            projetojavagui.JFPrincipal frame = new projetojavagui.JFPrincipal(txtUsuario.getText());
             frame.setVisible(true);
             this.dispose();
             
-        }if (entrar.equals("Claudio") && senha.equals("admin")) {
+        }else if(entrar.equals("Claudio") && senha.equals("admin")){
             JOptionPane.showMessageDialog(null, "Bem vindo " + entrar+"!");
-            projetojavagui.JFPrincipal frame = new projetojavagui.JFPrincipal();
+            projetojavagui.JFPrincipal frame = new projetojavagui.JFPrincipal(txtUsuario.getText());
             frame.setVisible(true);
             this.dispose();
-        }
-        else{
+        }else{
             JOptionPane.showMessageDialog(null, "Acesso Negado");
         }
     }//GEN-LAST:event_btnEntrarActionPerformed
