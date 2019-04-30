@@ -13,6 +13,7 @@ public class JFFuncionarios extends javax.swing.JFrame {
 int valor = 0;
     /**
      * Creates new form JFFuncionarios
+     * @param nome
      */
 
      public JFFuncionarios(String nome) {
