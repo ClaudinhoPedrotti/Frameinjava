@@ -14,12 +14,13 @@ int valor = 0;
     /**
      * Creates new form JFFuncionarios
      * @param nome
+     * 
      */
 
      public JFFuncionarios(String nome) {
-          initComponents();
-         lblNome.setText(nome);
-         txtFuncionario.setEnabled(false);
+        initComponents();
+        lblNome.setText(nome);
+        txtFuncionario.setEnabled(false);
         txtCPF.setEnabled(false);
         txtCargo.setEnabled(false);
         txtData.setEnabled(false);
@@ -29,6 +30,10 @@ int valor = 0;
         btnAlterar.setEnabled(false);
         btnExcluir.setEnabled(false);
         btnConfirmar.setEnabled(false);
+     }
+     public JFFuncionarios(String nome, String pesquisa){
+     initComponents();
+     txtFuncionario.setText(pesquisa);
      }
      
     public JFFuncionarios() {
@@ -44,8 +49,6 @@ int valor = 0;
         btnExcluir.setEnabled(false);
         btnConfirmar.setEnabled(false);
     }
-        
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -55,6 +58,7 @@ int valor = 0;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jSplitPane1 = new javax.swing.JSplitPane();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtFuncionario = new javax.swing.JTextField();
@@ -65,7 +69,7 @@ int valor = 0;
         jLabel5 = new javax.swing.JLabel();
         btnCadastrar = new javax.swing.JButton();
         btnPesquisar = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
         txtData = new javax.swing.JFormattedTextField();
         jLabel6 = new javax.swing.JLabel();
         btnNovo = new javax.swing.JButton();
@@ -110,10 +114,10 @@ int valor = 0;
             }
         });
 
-        jButton3.setText("Voltar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnVoltarActionPerformed(evt);
             }
         });
 
@@ -186,7 +190,7 @@ int valor = 0;
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton3)
+                        .addComponent(btnVoltar)
                         .addGap(40, 40, 40)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -271,7 +275,7 @@ int valor = 0;
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnConfirmar)
                         .addGap(26, 26, 26)))
-                .addComponent(jButton3)
+                .addComponent(btnVoltar)
                 .addContainerGap())
         );
 
@@ -290,7 +294,7 @@ int valor = 0;
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btnPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarActionPerformed
-       txtFuncionario.setEnabled(true);
+    /** txtFuncionario.setEnabled(true);
         txtCPF.setEnabled(true);
         txtData.setEnabled(false);
         txtCargo.setEnabled(false);
@@ -300,13 +304,19 @@ int valor = 0;
         btnCadastrar.setEnabled(false);
         btnNovo.setEnabled(false);
         btnExcluir.setEnabled(false);
+    */      
+            projetojavagui.JFPesquisar frame = new projetojavagui.JFPesquisar();
+            frame.setVisible(true);
+            
+     
+    
     }//GEN-LAST:event_btnPesquisarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         projetojavagui.JFPrincipal frame = new projetojavagui.JFPrincipal(lblNome.getText());
         frame.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
         btnAlterar.setEnabled(false);
@@ -421,7 +431,7 @@ int valor = 0;
     private javax.swing.JButton btnNovo;
     private javax.swing.JButton btnOk;
     private javax.swing.JButton btnPesquisar;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -429,6 +439,7 @@ int valor = 0;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel lblNome;
     private javax.swing.JFormattedTextField txtCPF;
     private javax.swing.JTextField txtCargo;
