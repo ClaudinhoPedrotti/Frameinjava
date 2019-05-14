@@ -21,8 +21,8 @@ public class JFPesquisar extends javax.swing.JFrame {
         initComponents();
     }
   public JFPesquisar(String nome){
-  initComponents();
-  lblNome.setText(nome);
+    initComponents();
+     lblNome.setText(nome);
     }
 
     /**
@@ -132,7 +132,7 @@ public class JFPesquisar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
-     projetojavagui.JFFuncionarios frame = new projetojavagui.JFFuncionarios();
+     projetojavagui.JFFuncionarios frame = new projetojavagui.JFFuncionarios(lblNome.getText());
      frame.setVisible(true);
      this.dispose();
     }//GEN-LAST:event_btnVoltarActionPerformed

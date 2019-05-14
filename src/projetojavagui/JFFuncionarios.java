@@ -305,7 +305,7 @@ int valor = 0;
         btnNovo.setEnabled(false);
         btnExcluir.setEnabled(false);
     */      
-            projetojavagui.JFPesquisar frame = new projetojavagui.JFPesquisar();
+            projetojavagui.JFPesquisar frame = new projetojavagui.JFPesquisar(lblNome.getText());
             frame.setVisible(true);
             
      
